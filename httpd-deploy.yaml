@@ -1,0 +1,15 @@
+---
+- hosts: all
+  
+  tasks:
+    - name: installing httpd server
+      action: yum name=httpd state=present
+
+    - name: restarting httpd server
+      service: name=httpd state=restarted
+
+    - name: getting the src file
+      git:
+        repo: "https://github.com/Sridhar-Peteti/srccode-fortest.git"
+        dest: "/var/www/html/"
+        version: main
