@@ -1,7 +1,7 @@
   resource "aws_instance" "keyinst" {
   ami = var.ami_id
   instance_type = var.inst_type
-  security_groups = ["aws_security_group.TF-SG.name"]
+  security_groups = [aws_security_group.TF-SG.name]
   for_each = var.inst_names
   tags = {
   Name = each.value
@@ -11,7 +11,6 @@
   resource "aws_security_group" "TF-SG" {
   name        = "TF-SG"
   description = "Adding terraform security group"
-  vpc_id      = "vpc-044b7285d31591717"
 
   ingress {
     description      = "SSH"
