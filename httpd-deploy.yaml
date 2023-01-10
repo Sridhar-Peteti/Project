@@ -11,7 +11,7 @@
     - name: installing git
       action: yum name=git state=present
 
-    - name: getting the src file
+    - name: getting the src file and adding to httpd server
       git:
         repo: "https://github.com/Sridhar-Peteti/srccode-fortest.git"
         dest: "/var/www/html/"
