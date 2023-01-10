@@ -1,5 +1,5 @@
 variable "s3_bktname" {
-default = "terra_sridharacl_bucket"
+default = "terra-sridharacl-bucket"
 }
 
 variable "s3acl" {
