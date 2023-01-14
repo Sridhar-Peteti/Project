@@ -11,4 +11,10 @@ type = set(string)
 default = ["dev", "test", "prod"]
 }
 
+variable "subnet_id" {
+  type = string
+}
 
+variable "security_group_id" {
+  type = string 
+}
